@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+{% block body %}
+	<h3> Team 1 </h3>
+	<table class="table table-bordered" width="50%">
+		<tr>
+			<th width="50%">Summoner Name</th>
+			<th width="50%">Champion</th>
+		</tr>
+		{% for player in team1 %}
+			<tr>
+				<td>{{ player[0] }}</td>
+				<td>{{ player[1] }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+	<h3> Team 2 </h3>
+	<table class="table table-bordered" width="50%">
+		<tr>
+			<th width="50%">Summoner Name</th>
+			<th width="50%">Champion</th>
+		</tr>
+		{% for player in team2 %}
+			<tr>
+				<td>{{ player[0] }}</td>
+				<td>{{ player[1] }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

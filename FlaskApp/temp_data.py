@@ -1,0 +1,2 @@
+current_game1 = [["Test1", "Gragus", "Gold IV 68LP", "0/12/18"],["Test2", "Gragus", "Gold IV 68LP", "0/12/18"],["Test3", "Gragus", "Gold IV 68LP", "0/12/18"],["Test4", "Gragus", "Gold IV 68LP", "0/12/18"],["Test5", "Gragus", "Gold IV 68LP", "0/12/18"]]
+current_game2 = [["Test1", "Gragus", "Gold IV 68LP", "0/12/18"],["Test2", "Gragus", "Gold IV 68LP", "0/12/18"],["Test3", "Gragus", "Gold IV 68LP", "0/12/18"],["Test4", "Gragus", "Gold IV 68LP", "0/12/18"],["Test5", "Gragus", "Gold IV 68LP", "0/12/18"]]

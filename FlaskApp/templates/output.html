@@ -1,0 +1,37 @@
+{% extends "header.html" %}
+{% block body %}
+
+	<h3> Team 1 </h3>
+	<table class="table table-bordered" width="50%" id="current-game">
+		<tr>
+			<th width="4%"> </th>
+			<th width="48%">Summoner Name</th>
+			<th width="48%">Champion</th>
+			
+		</tr>
+		{% for player in team1 %}
+			<tr>
+				<td><img width="20px" src="{{ url_for('static', filename='images/championIcons/') }}{{ player[1].replace(" ", "") }}_Square_0.png"></td>
+				<td>{{ player[0] }}</td>
+				<td>{{ player[1] }}</td>				
+			</tr>
+		{% endfor %}
+	</table>
+
+	<h3> Team 2 </h3>
+	<table class="table table-bordered" width="50%" id="current-game">
+		<tr>
+			<th width="4%"> </th>
+			<th width="48%">Summoner Name</th>
+			<th width="48%">Champion</th>			
+		</tr>
+		{% for player in team2 %}
+			<tr>
+				<td><img width="20px" src="{{ url_for('static', filename='images/championIcons/') }}{{ player[1].replace(" ", "") }}_Square_0.png"></td>
+				<td>{{ player[0] }}</td>
+				<td>{{ player[1] }}</td>
+				
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

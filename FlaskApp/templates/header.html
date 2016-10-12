@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>13DTP Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+	<link rel='shortcut icon' href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+</html>
+<header>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		  <a class="navbar-brand" href="/">
+			<img style="max-width:100px; margin-top: -7px;" src="{{ url_for('static', filename='images/league_logo.png') }}">
+		  </a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<form class="navbar-form navbar-left" action="{{ url_for('current_game_output') }}" method="POST">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Summoner Name" name="summoner_name">
+					<select class="form-control" name="region">
+						<option value="oce">Oceanic</option>
+						<option value="na">North America</option>
+						<option value="euw">Europe West</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-default" value="Send">Submit</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/current">Current Game</a></li>
+				<li><a href="/champions">Champion Info</a></li>
+				<li><a href="/summoner">Summoner Search</a></li>
+
+			</ul>
+
+		</div><!-- /.container-fluid -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+
+</nav>
+</header>
+
+<body>
+    <div class="container-fluid" align="center" style="min-height:100%">
+	
+	{% block body %}{% endblock %}
+
+
+    </div>
+
+
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</body>

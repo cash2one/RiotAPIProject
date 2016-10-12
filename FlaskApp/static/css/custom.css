@@ -1,0 +1,4 @@
+#current-game td:first-child, 
+#current-game th:first-child  {
+	border-color: #ddd #fff #ddd #ddd;	
+}
